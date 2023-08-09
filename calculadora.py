@@ -9,11 +9,18 @@ cuenta = "" # similar a calculo = tk.StringVar() del lado gráfico
 
 ####### funciones  #######################
 def clic(tecla):
+    """
+    Funciòn que captura la pulsión de cada tecla y la concatena con la
+    expresión existente en la variable cuenta mostrando por pantalla
+    """
     global cuenta
     cuenta = cuenta + tecla
     calculo.set(cuenta)
     
 def borrar_caracter():
+    """
+    Función que borra el último caracter añadido en la pantalla de la calculadora
+    """
     global cuenta
     cuenta = cuenta[:-1]
     if cuenta:
